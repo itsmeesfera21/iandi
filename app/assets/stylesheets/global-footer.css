@@ -1,0 +1,76 @@
+.global-footer {
+  height: 180px;
+  background: #fff;
+  border-top: 4px solid #666;
+  color: #333;
+  margin-top: 40px;
+}
+
+.global-footer .tagline {
+  font-size: 2em;
+  padding-top: 19px;
+}
+
+.global-footer .logo-wrapper {
+  height: 180px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.global-footer .logo {
+  padding: 10px;
+}
+
+.global-footer .logo img {
+  width: 150px;
+  height: 150px;
+}
+
+.global-footer .text-wrapper {
+  height: 180px;
+  max-width: 768px;
+  margin: auto;
+  position: relative;
+}
+
+.global-footer .contact {
+  float: left;
+  padding: 10px;
+  font-size: 1.25em;
+  text-align: left;
+  position: absolute;
+  bottom: 32px;
+  left: 15%;
+}
+.global-footer .contact {
+  float: left;
+  padding: 10px;
+  font-size: 1.25em;
+  text-align: left;
+  position: absolute;
+  bottom: 32px;
+  left: 15%;
+}
+
+.global-footer .contact a {
+  color: #333;
+  text-decoration: none;
+}
+
+.global-footer .social {
+  font-size: 4em;
+  width: 280px;
+  position: absolute;
+  bottom: 32px;
+  right: 15%;
+}
+
+.global-footer .social ul li {
+  display: inline;
+  padding: 0 10px;
+}
+
+
+/* Social icon colors */
+.fa-twitter { color: #00ACED; }
+.fa-facebook-square { color: #3B5998; }

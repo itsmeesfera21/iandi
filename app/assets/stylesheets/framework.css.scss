@@ -1,0 +1,35 @@
+body {
+  background: #fff;
+  font: 12px/1.35 Arial, Helvetica, sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+.wrapper {
+  background: image-url('hoodie_bg.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+}
+
+.page {
+  width: 768px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}

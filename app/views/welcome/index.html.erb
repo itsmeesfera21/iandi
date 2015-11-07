@@ -1,0 +1,360 @@
+ <div class="main-container">
+
+     <section class="clearfix">
+        <div class="col-sm-12">
+            <div class="slider hoodiSlider" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat:false, delay:500}">           
+        <% @styles.each do |style| %>
+              <div class="slide">
+                <a href="#">
+                <img src="<%= asset_path(style.image_name) %>">
+                </a>
+              </div>
+          <% end %>
+          </div>
+            <div class="secHeading">
+              <img src="<%= asset_path('heading-top.png')%>" alt"heading">
+              <h2>Black Pull</h2>
+            </div>
+            </div>
+        </section>
+
+ <!-- black pull sec closed here -->
+        <div class="divider"></div>
+        <!-- Our Dna sec start here -->
+   <section class="clearfix">
+        <div class="col-sm-12">
+            <div class="slider hoodiSlider" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat:false, delay:500}">
+              <% @styles.each do |style| %>
+              <div class="slide">
+                <a href="#">
+                 <img src="<%= asset_path(style.image_name) %>">
+                </a>
+              </div>
+              <% end %>
+            </div>
+            <div class="secHeading">
+             <img src="<%= asset_path('heading-top.png')%>" alt"heading">
+              <h2>Our DNA</h2>
+            </div>
+        </section>
+       <!-- Our Dna sec closed here -->
+        <div class="divider"></div>
+        <!-- Our Dna sec start here -->
+
+        <section class="clearfix">
+        <div class="col-sm-12">
+         <div class="slider hoodiSlider" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat:false, delay:500}">
+              <% @styles.each do |style| %>
+              <div class="slide">
+                <a href="#">
+                 <img src="<%= asset_path(style.image_name) %>">
+                </a>
+              </div>
+              <% end %>
+            </div>
+            <div class="secHeading">
+           <img src="<%= asset_path('heading-top.png')%>" alt"heading">
+              <h2>Strictly VT </h2>
+            </div>
+        </section>
+        <!-- Our Dna sec closed here -->
+        <div class="divider"></div>
+        <!-- Our Dna sec start here -->
+<section class="clearfix">
+        <div class="col-sm-12">
+               <div class="slider hoodiSlider" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat:false, delay:500}">
+              <% @styles.each do |style| %>
+              <div class="slide">
+                <a href="#">
+                 <img src="<%= asset_path(style.image_name) %>">
+                </a>
+              </div>
+              <% end %>
+            </div>
+            
+            <div class="secHeading">
+             <img src="<%= asset_path('heading-top.png')%>" alt"heading">
+              <h2>Imagine</h2>
+            </div>
+        </section>
+
+        <!-- Our Dna sec closed here -->
+        <div class="divider"></div>
+        <!-- Our Dna sec start here -->
+
+    <!--  <div class="">
+      <ul class="">
+        <% @styles.each do |style| %>
+          <li class="">
+            <div id="<%= style.short_name %>">
+              <img src="<%= asset_path(style.image_name) %>">
+              <h2><%= style.name %></h2>
+              <select id="<%= style.short_name %>-size" class="size">
+                <% style.sizes.in_stock.each do |size| %>
+                  <option value="<%= size.short_name %>"><%= size.name %></option>
+                <% end %>
+              </select>
+            </div>
+          </li>
+        <% end %>
+      </ul>        
+      </div>  -->
+  <% if false %>
+  <div id="picker-pattern" class="picker">
+    <div class="picker-header">
+      <h2>Choose a pattern</h2>
+    </div>
+    <div class="picker-content">
+    <select id="patterns">
+      <option value="centered">Centered</option>
+      <option value="top-right">Top-Right</option>
+    </select>
+    </div>
+  </div>
+  <% end %>
+  <div id="picker-color" class="picker">
+    <!--<div class="picker-header">
+      <h2>Colorize Your Threads</h2>
+    </div>-->
+    <div class="picker-content">
+    <div class="design">
+      <div id="logo_design_right_display" class="design-element-display"></div>
+      <div id="logo_design_left_display" class="design-element-display selected"></div>
+      <div id="logo_design_right_highlight" class="design-element-highlight"></div>
+      <div id="logo_design_left_highlight" class="design-element-highlight selected"></div>
+      <div id="logo_design_right" class="design-element"></div>
+      <div id="logo_design_left" class="design-element selected"></div>
+      <form>
+        <input type="hidden" id="design_left_color" class="design-element-input selected" value="White"/>
+        <input type="hidden" id="design_right_color" class="design-element-input" value="White"/>
+      </form>
+    </div>
+    <div id="colors">
+      <div id="colors-swatches">
+        <div id="colors-wrapper">
+        <ul>
+          <% @color_order.each do |color_name| %>
+            <% color = @colors.detect{ |c| c.name == color_name } %>
+            <% unless color.nil? %>
+            <li>
+              <div id="color-<%= color.name %>" class="swatch">
+                <img src="<%= asset_path(color.image_name) %>" width=238 height=80>
+              </div>
+            </li>
+            <% end %>
+          <% end %>
+        </ul>
+        </div>
+      </div>
+      <div class="colors-arrow colors-arrow-left"><div id="colors_left_arrow" class="arrow-left"></div></div>
+      <div class="colors-arrow colors-arrow-right"><div id="colors_right_arrow" class="arrow-right"></div></div>
+      </div>
+    </div>
+  </div>
+  <section class="clearfix">
+        <div class="col-sm-12">
+<div class="secHeading">
+             <img src="<%= asset_path('heading-top.png')%>" alt"heading">
+              <h2>Threads</h2>
+            </div>
+        </section>
+        <!-- Our Dna sec closed here -->
+        <div class="divider"></div>
+        <!-- Our Dna sec start here -->
+
+     <section class="clearfix">
+        <div class="col-sm-12">
+          <div class="slider hoodiSlider" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat:false, delay:500}">
+              
+<% @styles.each do |style| %>
+              <div class="slide">
+                <a href="#">
+                <img src="<%= asset_path(style.image_name) %>">
+                </a>
+              </div>
+          <% end %>
+          </div>
+            <div class="secHeading">
+            <img src="<%= asset_path('heading-top.png')%>" alt"heading">
+              <h2>In The Middle</h2>
+            </div>
+        </section>
+
+     <!-- threads sec closed here -->
+        <div class="divider"></div>
+        <!-- in the middle sec start here -->
+        <section class="clearfix bagIt-wrap">
+        
+            <div class="slider hoodiSlider" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat:false, delay:500}">
+              <div class="slide">
+                <div class="slide_inner">
+                  <div class="slide_content">
+                    <h3>All Hoodies $88<br>
+                    Free Shipping to the US.</br>
+                    100% Satisfaction Guaranteed!</h3>
+                    <img src="<%= asset_path('Hoodie-SymbolsWhite.png')%>"alt="">                    
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                      Launch demo modal
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+               <div class="slide_inner">
+                  <div class="slide_content">
+                    <h3>All Hoodies $88<br>
+                    Free Shipping to the US.</br>
+                    100% Satisfaction Guaranteed!</h3>
+                    <img src="<%= asset_path('Hoodie-SymbolsWhite.png')%>" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide_inner">
+                  <div class="slide_content">
+                    <h3>All Hoodies $88<br>
+                    Free Shipping to the US.</br>
+                    100% Satisfaction Guaranteed!</h3>
+                    <img src="<%= asset_path('Hoodie-SymbolsWhite.png')%>" alt="">
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="col-sm-12 clearfix">
+              <div class="secHeading">
+                <img src="<%= asset_path('heading-top.png')%>" alt"heading">
+                <h2>Bag it</h2>
+              </div>
+            </div>
+        </section>
+        <!-- Bag it sec closed here -->
+        <div class="divider"></div>
+
+  <div id="picker-review" class="picker">
+    <div class="picker-content">
+      <div class="review">
+        <div id="style_display_review_overlay" class="style-display review overlay"></div>
+        <div id="style_display_review" class="style-display review"></div>
+        <div class="design-wrapper review">
+          <div id="logo_design_right_display_review" class="design-element-display review"></div>
+          <div id="logo_design_left_display_review" class="design-element-display review selected"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="picker-checkout" class="picker">
+    <div class="picker-header">
+      <h2>Bag it!</h2>
+    </div>
+    <div class="picker-content">
+    </div>
+    <div class="checkout-content">
+      <div class="item-name"></div>
+      <div class="item-price"></div>
+      <form id="pay_now" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="SXBK6QGHY7U62">
+        <input type="hidden" name="lc" value="US">
+        <input type="hidden" name="item_name" value="ITEMNAMEPLACEHOLDER">
+        <input type="hidden" name="amount" value="88.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_SM.gif:NonHosted">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  $(function() {
+    // design color picker
+
+    designImageData = <%= raw @design_image_json %>
+
+    $('#picker-color .picker-content').css('background-image', 'url(' + "<%= asset_path('black_pull_bg.png') %>" + ')');
+
+    $('#logo_design_left').hover(
+       function(){ $('#logo_design_left_highlight').addClass('hover'); },
+       function(){ $('#logo_design_left_highlight').removeClass('hover'); }
+    );
+
+    $('#logo_design_right').hover(
+       function(){ $('#logo_design_right_highlight').addClass('hover'); },
+       function(){ $('#logo_design_right_highlight').removeClass('hover'); }
+    );
+
+    <% # TODO: abstract some of this logic %>
+    $('#logo_design_left').click(function() {
+      $('.design-element').removeClass("selected");
+      $('.design-element-display').removeClass("selected");
+      $('.design-element-highlight').removeClass("selected");
+      $('.design-element-input').removeClass("selected");
+      $('#logo_design_left').addClass("selected");
+      $('#logo_design_left_display').addClass("selected");
+      $('#logo_design_left_highlight').addClass("selected");
+      $('#logo_design_left_display_review').addClass("selected");
+      $('#design_left_color').addClass("selected");
+    });
+
+    $('#logo_design_right').click(function() {
+      $('.design-element').removeClass("selected");
+      $('.design-element-display').removeClass("selected");
+      $('.design-element-highlight').removeClass("selected");
+      $('.design-element-input').removeClass("selected");
+      $('#logo_design_right').addClass("selected");
+      $('#logo_design_right_display').addClass("selected");
+      $('#logo_design_right_highlight').addClass("selected");
+      $('#logo_design_right_display_review').addClass("selected");
+      $('#design_right_color').addClass("selected");
+    });
+
+    var colorsWrapperSize = $('#colors-wrapper ul li').first()[0].getBoundingClientRect().width * $('#colors-wrapper ul li').size();
+    $('#colors-wrapper').width(colorsWrapperSize);
+
+    $('.swatch').click(function() {
+      var designName = 'logo_design';
+      var designElementName = $('.design-element.selected').first().attr('id').split('_').pop();
+      var colorName = $(this).attr('id').split('-').pop();
+      var imageUrl = designImageData[designName][designElementName][colorName]['image_url'];
+      var colorNameString = designImageData[designName][designElementName][colorName]['name'];
+      $('.design-element-display.selected').css('background-image', 'url(' + imageUrl + ')');
+      $('.design-element-input.selected').val(colorNameString)
+      $('.design-element-highlight').removeClass("selected");
+    });
+
+    $('.colors-arrow-right').click(function() {
+      scrollWidth = 3*$('#colors-wrapper ul li').first().width();
+      $('#colors-swatches').animate( { scrollLeft: '+=' + scrollWidth}, 400);
+    });
+
+    $('.colors-arrow-left').click(function() {
+      scrollWidth = 3*$('#colors-wrapper ul li').first().width();
+      $('#colors-swatches').animate( { scrollLeft: '-=' + scrollWidth}, 400);
+    });
+
+    // review
+    <% # the following will need to update on change when more styles are added %>
+    styleImageUrl = $('#black-pullover img').attr('src');
+    $('#style_display_review').css('background-image', 'url(' + styleImageUrl + ')');
+    $('#style_display_review_overlay').css('background-image', 'url(' + "<%= asset_path('black_pull_strings.png') %>"  + ')');
+
+    // checkout
+    function generateProductName() {
+      var designName = 'I and I Logo';
+      var styleName = 'Black Pullover';
+      var size = $('#black-pullover-size option:selected').text();
+      var elementColors = $('.design-element-input').map(function() { return $(this).val(); });
+      var elementColorsString = Array.prototype.join.call(elementColors, ', ');
+      return [designName, styleName, size, elementColorsString].join(' - ');
+    }
+
+    $('#pay_now').submit(function () {
+      $(this).find("input[name='item_name']").val(generateProductName());
+    });
+  });
+</script>

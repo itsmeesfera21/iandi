@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I and I Clothing</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic,300,200italic,200,600,400italic,600italic,700,700italic', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+     <%= render 'layouts/shim' %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="page" id="page">
+        <%# Add drop-shadow and set height to the same as main %>
+        <div class="shadow" id="main-shadow"></div>
+        <script type="text/javascript">
+          window.onload = function(){
+            var shadow = document.getElementById('main-shadow');
+            var page = document.getElementById('page');
+
+            shadow.style.height = ((page.offsetHeight - 28) + "px");
+          };
+        </script>
+
+        <%# Add header template %>
+        <div class="header-container">
+          <div class="header">
+            <h1 class="logo"><strong>I and I Clothing</strong><a href="#" title="I and I Clothing" class="logo"><img src="<%=asset_path('header.png')%>" alt="I and I Clothing"></a></h1>
+            <div class="quick-access">
+            </div>
+          </div>
+        </div>
+        <div class="main-container">
+          <div class="main">
+            <%# Main rendering %>
+            <%= yield %>
+          </div>
+          <%# Content footer %>
+          <div class="footer-container">
+            <div class="footer">
+              <address>© 2015 I and I Clothing</address>
+            </div>
+          </div>
+        </div>
+      </div> <%# end page div %>
+
+      <%# Social footer %>
+      <div class="global-footer">
+        <div class="logo-wrapper">
+          <div class="logo left">
+            <img src="<%=asset_path('iandi-alt.gif')%>" alt="I and I Clothing">
+          </div>
+          <div class="logo right">
+            <img src="<%=asset_path('certified.gif')%>" alt="Certified B Corporation">
+          </div>
+          <div class="text-wrapper">
+            <div class="tagline">Vermont's Interactively Driven Hoodie Company</div>
+            <div class="contact">
+              <ul>
+                <li>1-802-503-1ART</li>
+                <li><a href="mailto:saysomething@iandi.com">saysomething@iandi.com</a></li>
+              </ul>
+            </div>
+            <div class="social">
+              <ul>
+                <li><a href=" https://twitter.com/iandiclothing"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/IandIClothing?fref=ts"><i class="fa fa-facebook-square"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- slick js --> 
+
+<script>
+$(document).ready(function(){
+  $('.hoodiSlider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+    autoplay: false,
+    autoplaySpeed: 4000,
+    responsive: [
+        {
+          breakpoint: 993,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: false
+          }
+        }
+    ]
+  }); 
+   
+});
+
+$(document).ready(function(){
+  $('.designSlider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+    autoplay: false,
+    autoplaySpeed: 4000,
+    responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: false
+          }
+        }
+    ]
+  }); 
+   
+});
+
+</script>
+</body>
+</html>
